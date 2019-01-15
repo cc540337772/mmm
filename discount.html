@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  
+  <link rel="stylesheet" href="./css/discount.css">
+</head>
+<body>
+  <div class="mmm_container">
+     <div class="mmm_header">
+         <div class="hd_left">
+            <a class='left_arrow'href="javascript:history.back();"><</a>
+           <a href="#">
+               国内折扣
+          </a>
+         </div>
+         <div class="hd_right">
+            <a href="#">
+               <img src="./images/header_app.png" alt="">
+            </a>
+         </div>
+     </div>
+     <div class="mmm_main">
+       <!-- 挖个坑 -->
+     </div>
+     <div class="mmm_bottom">
+        <div class="bt_top">
+            <ul class='clearfix'>
+              <li>
+                <a href='#'>登陆</a>
+              </li>
+              <li>
+                <a href='#'>注册</a>
+              </li>
+              <li>           
+                <a href='#'>
+                   <span>返回顶部</span>
+                   <img src="./images/top.jpg" class='top_jt' alt="">
+                </a>
+              </li>
+            </ul>
+        </div>
+        <div class="bt_bottom">
+           <p><a href="#" style='color:#ff1b32'>手机APP下载 </a><a href="#"> 慢慢买手机版</a><span style='color:#939292'>--掌上比价平台</span></p>
+           <p>m.manmanbuy.com</p>
+        </div>
+     </div>
+  </div>
+
+  <script>
+    (window.onresize = window.__setFontSize__ = function () {
+      document.documentElement.style.fontSize = Math.min(750, Math.max(document.documentElement.clientWidth,
+        320)) / 750 * 75 + 'px'
+    })()
+  </script>
+  <script type='text/html' id='mmTpl'>
+    {{each result v i}}
+    <h1>{{v.productName}}</h1>
+         <p class='smallp'>{{v.productFrom}} {{v.productTime}}  {{v.productTips}}</p>
+         <div class='imgBox'><img src="./images/hua.jpg" alt=""></div>
+         <h2>{{v.productInfo2}}</h2>
+         <h3>{{v.productInfo1}}</h3>
+         <div style="font-size: 30px;">{{@v.productInfo}}</div>
+         <div class='tupian'>{{@ v.productImg}}</div>
+         <div class='buys'>前往购买</div>
+         <div class="ewm"><img src="./images/mmbweixin2.png" alt=""></div>
+         <div class="comments">{{@ v.productComment}}</div>
+    {{/each}}
+  
+  </script>
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/template/template-web.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/discount.js"></script>
+
+
+
+</body>
+
+</html>

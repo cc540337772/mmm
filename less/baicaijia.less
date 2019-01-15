@@ -1,0 +1,265 @@
+// 导入 normalize.less 进行浏览器样式统一
+@import "normalize";
+
+// 在 normalize 基础上, 进行样式重置, 添加一些自定义的类
+@import "base";
+
+@design : 750;
+
+@base : 75rem;
+.displayblock{
+ display: block;
+}
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+  }
+ul{
+    list-style:none;
+  }
+html,body{
+    width: 100%;
+    height: 100%;
+  
+  }
+  .fl{
+    float:left;
+  }
+  .fr{
+    float:right;
+  }
+  .mr_5{
+    margin-right:5px;
+  }
+  .ml_5{
+    margin-left:5px;
+  }
+.mmm_container{
+    width: 100%;
+    // height:3000/@base;
+    background-color: #fff;
+    max-width:750px;
+    min-width:320px;
+    margin:0 auto;
+    position: relative;
+    .mmm_header{
+      height:100/@base;
+      background-color: #f4483e;
+      line-height:100/@base;
+      text-align: center;
+      .hd_left{
+          a{
+              font-size:30/@base;
+              color:#fff;
+          }
+      }
+      .hd_right{
+          img{
+            width: 80/@base;
+            height: 80/@base;
+            position: absolute;
+            top:10/@base;
+            right:20/@base;
+          }
+      }
+    }
+}
+.mmm_main{
+  // height:2500/@base;
+  width: 100%;
+  background-color: #fff;
+}
+.mmm_bottom{
+  height: 20/@base;
+  width: 100%;
+  background-color: #efefef;
+  text-align: center;
+  .bt_top{
+    height:67/@base;
+    li{
+      float:left;
+      width: 33.3%;
+      border:1px solid #ccc;
+      box-sizing: border-box;
+      text-align: center;
+      line-height:67/@base;
+      background-color: #efefef;
+      a{
+        font-size:18px;
+        display: block;
+        position: relative;
+      }
+
+    }
+    .top_jt{
+      width: 30/@base;
+      height:30/@base;
+      float:left;
+      margin-top:17/@base;
+      margin-left:56/@base;
+      margin-right:-40/@base;
+    }
+  }
+  .bt_bottom{
+    line-height:40/@base;
+    p{
+        background-color: #efefef;
+    }
+  }
+}
+.left_arrow{
+    float:left;
+    margin-left:20/@base;
+    font-size:30/@base;
+}
+.mmm_main{
+    // height:3000/@base;
+    // background-color: skyblue;
+    .mmm_nav{
+        height:80/@base;
+        width:100%;
+        // background-color: red;
+        overflow:hidden;
+        // border-bottom:5px solid #ccc;
+        position: relative;
+        ul{
+            width:2431/@base;
+            // overflow: hidden;
+        }
+        li{
+            height:80/@base;
+            width:187/@base;
+            background-color: #fff;
+            color:black;
+            text-align: center;
+            line-height:80/@base;
+            font-size:18/@base;
+            float:left;
+            position: relative;
+            
+        }
+        .current{
+            border-bottom:3px solid #d90000;
+        }
+        a{
+            display: block;
+        }
+       
+    }
+}
+.mmm_tp{
+    li{
+        height:300/@base;
+        // background-color: pink;
+        border-bottom:1px solid black;
+        padding-top:20/@base;
+        padding-right:20/@base;
+    }
+}
+.img{
+    width: 260/@base;
+    height:260/@base;
+    position: absolute;
+    left:0;
+
+}
+.mmm_tp {
+    ul{
+        li{
+            padding-left:260/@base;
+            position: relative;
+        }
+    }
+}
+.info_post {
+    .postage{
+      padding-left:20/@base;
+      font-size:26/@base;
+    }
+    .price{
+        color:#fc1d13;
+        font-size:28/@base;
+        margin-top:10/@base;
+        margin-left:20/@base;
+        margin-bottom:40/@base;
+        i{
+            font-style:normal;
+        }
+        del{
+            color:#ede7df;
+            font-size:14/@base;
+            margin-left:10/@base;
+        }
+        em{
+            font-style:normal;
+        }
+    }
+    .bar{
+        i{
+            display: inline-block;
+            width:160/@base;
+            height:30/@base;
+            border:2px solid #fc5359;
+            text-align: center;
+            line-height:30/@base;
+            margin-left:20/@base;
+            border-radius: 5px;
+            position: relative;
+            vertical-align: middle;
+            em{
+                width:1%;
+                display: block;
+                height:100%;
+                border-radius: 2/@base;
+                background-color: #fc353a;
+            }
+            span{
+                position: absolute;
+                top:0;
+                font-style:normal;
+                left:65/@base;
+            }
+             
+        }
+        b{
+            color:#fc535f;
+            margin-left:20/@base;
+            vertical-align: middle;
+        }
+    }
+    .conpon{
+        a{
+            width: 210/@base;
+            height:50/@base;
+            display: block;
+            text-align: center;
+            line-height:50/@base;
+            font-size:24/@base;
+            color:#e01f22;
+            border:1px dashed #f09293;
+            margin-top:20/@base;
+            margin-left:20/@base;
+        }
+    }
+    .link{
+        a{
+            display: block;
+            height:50/@base;
+            width:115/@base;
+            background-color: #ff5f5e;
+            text-align: center;
+            line-height:50/@base;
+            position: absolute;
+            right:20/@base;
+            bottom:60/@base;
+            border-radius: 10/@base;
+            color:white;
+            font-size:18/@base;
+        }
+    }
+    .info_post{
+        height:300/@base;
+
+    }
+}

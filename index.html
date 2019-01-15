@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div class="mmm_container">
+        <!-- 头部 -->
+        <div class="mmm_header">
+            <div class="mmm_logo">
+                <img src="./images/header_logo.png" alt="">
+            </div>
+            <div class="mmm_app">
+                <img src="./images/header_app.png" alt="">
+            </div>
+        </div>
+        <!-- 搜索框 -->
+        <div class="mmm_search">
+            <input type="text" placeholder="请输入你想比价的商品">
+            <div class="search">搜索</div>
+        </div>
+        <!-- 分类 -->
+        <div class="mmm_category clearfix">
+
+               <!-- 挖个坑 -->
+               
+        </div>
+        <!-- 折扣 -->
+        <div class="mmm_discount">
+                <div class="mmm_ranking">
+                        <div class="paihang"><a href="#">超值折扣推荐</a></div>
+                        <div class="cc">
+                            <img src="./images/more.png" alt="">
+                        </div>
+                 </div>
+               <!-- 挖个坑 -->
+        </div>
+        <!-- 更多 -->
+        <div class="mmm_more">
+            <a href="#">更多优惠信息>></a>
+        </div>
+        <!-- 排行榜 -->
+        <div class="mmm_ranking">
+            <div class="paihang"><a href="#">品牌排行</a></div>
+            <div class="cc">
+                <img src="./images/more.png" alt="">
+            </div>
+        </div>
+       
+        <!-- 底部 -->
+        <div class="mmm_footer">
+            <div class="ft_top">
+                <div class="login">
+                    <a href="#">登录</a>
+                </div>
+                <div class="sign"> <a href="#">注册</a></div>
+                <div class="mmm_top">
+                    <img src="./images/top.jpg" alt="">
+                    <a href="#">返回顶部</a></div>
+            </div>
+            <div class="ft_com">
+                <div class="down">
+                    <a href="#">
+                        <span>手机APP下载</span>
+                        <span>慢慢买手机版</span>
+                        <span>--掌上比价平台</span>
+
+                    </a>
+                    <a href="#">m.mammanbuy.com</a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 菜单模板引擎 -->
+    <script type="text/html" id="navid">
+        {{each result v i}}
+        <div class="box {{i>7?'hide':''}}">
+                <a href="{{v.titlehref}}?indexmenuId={{v.indexmenuId}}">
+                   {{@ v.img}}
+                    <p>{{@ v.name}}</p>
+                </a>
+            </div>
+         {{/each}}
+    </script>
+
+    <!-- 折扣模板引擎 -->
+    <script type="text/html" id="discountid">
+
+     {{each result v i}}
+         <div class="mmm_product">
+                <div class="pic">
+                   {{@ v.productImgSm}}
+                </div>
+                <div class="detail">
+                    <div class="info">
+                        <p>{{@ v.productName}}</p>
+                        <span>{{@ v.productPinkage}}</span>
+                    </div>
+                    <div class="time clearfix">
+                        <p class="fl">{{@ v.productFrom}}</p>
+                        <p class="fl">{{@ v.productTime}}</p>
+                        <span class="fr">{{@ v.productComCount}}</span>
+                    </div>
+                </div>
+         </div>
+         {{/each}}
+    </script>
+    <script>
+         (window.onresize = window.__setFontSize__  = function(){
+      document.documentElement.style.fontSize = Math.min(750, Math.max(document.documentElement.clientWidth, 320) ) / 750 * 75 + 'px'}
+    )()
+    </script>
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/template/template-web.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>

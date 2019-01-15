@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/gsproduct.css">
+  <link rel="stylesheet" href="./fonts/css/font-awesome.min.css">
+</head>
+<body>
+  <div class="mmm_container">
+     <div class="mmm_header">
+         <div class="hd_left">
+           <a href="index.html" class='back'><</a>
+           <a href="#">
+             凑单品
+          </a>
+         </div>
+         <div class="hd_right">
+            <a href="#">
+               <img src="./images/header_app.png" alt="">
+            </a>
+         </div>
+     </div>
+     <div class="mmm_main">
+          <div class="mmm_nav">
+            <ul class='clearfix'>
+              <li>
+                <a href="javascript:;" class='jd'>
+                  <span>京东</span>
+                  <i class='fa fa-caret-down'></i>
+                </a>
+              </li>
+              <li>
+                  <a href="javascript:;" class='hb'>
+                      <span>华北</span>
+                      <i class='fa fa-caret-down'></i>
+                  </a>
+              </li>
+              <li>
+                  <a href="javascript:;" class='qbjg'>
+                      <span>全部价格</span>
+                      <i class='fa fa-caret-down'></i>
+                  </a>
+              </li>
+              <li class='tubiao'>
+               <a href="#">
+                <img src="./images/icon_search.svg" alt="">
+              </a>
+              </li>
+            </ul>
+            
+          </div>
+          <!-- 京东按钮点击隐藏 -->
+          <div class="jd_hide hide">
+            <ul>
+              <!-- 挖个坑 -->
+             
+            </ul>
+          </div>
+          <!-- 华北地区隐藏 -->
+          <div class="hb_hide hide">
+              <ul>
+                  <li><a href="javascript:;">华北</a></li>
+               
+                 
+                </ul>
+          </div>
+          <!-- 全部价格显示隐藏 -->
+          <div class="qbjg_hide hide">
+              <ul>
+                  <li><a href="javascript:;">全部价格
+                      <i class='fa fa-check tubiao'></i>
+                  </a>
+                    </li> 
+                 
+                </ul>
+          </div>
+          <div class='mmm_last'>
+             <ul class='clearfix'>
+               
+                
+               
+             </ul>
+              
+          </div>
+     </div>
+     <div class="mmm_bottom">
+        <div class="bt_top">
+            <ul class='clearfix'>
+              <li>
+                <a href='#'>登陆</a>
+              </li>
+              <li>
+                <a href='#'>注册</a>
+              </li>
+              <li>           
+                <a href='#'>
+                   <span>返回顶部</span>
+                   <img src="./images/top.jpg" class='top_jt' alt="">
+                </a>
+              </li>
+            </ul>
+        </div>
+        <div class="bt_bottom">
+           <p><a href="#" style='color:#ff1b32'>手机APP下载 </a><a href="#"> 慢慢买手机版</a><span style='color:#939292'>--掌上比价平台</span></p>
+           <p>m.manmanbuy.com</p>
+        </div>
+     </div>
+  </div>
+
+  <script>
+    (window.onresize = window.__setFontSize__ = function () {
+      document.documentElement.style.fontSize = Math.min(750, Math.max(document.documentElement.clientWidth,
+        320)) / 750 * 75 + 'px'
+    })()
+  </script>
+
+  <!-- 京东渲染 -->
+  <script type='text/html' id='jdTpl'>
+    {{each result v i}}
+    <li>
+      <a class='shopId' href="javascript:;" data-id={{v.shopId}}>{{v.shopName}}
+          <b class='fa fa-check {{i==0?"":"hide"}}'></b>
+      </a>
+    </li>
+    {{/each}}
+  
+  </script>
+
+  <!-- 华北渲染 -->
+  <script type='text/html' id='hbTpl'>
+    {{each result v i}}
+    <li><a  class='areaId' href="javascript:;" data-id={{v.areaId}}>{{v.areaName}}
+        <em class='fa fa-check {{i==0?"":"hide"}}'></em>
+    </a></li>
+    {{/each}}
+  
+  </script>
+
+  <!-- 图片区域渲染 -->
+  <script type='text/html' id='TpTpl'>
+    {{each result v i}}
+    <li>
+        <div class="imgBox">
+          <img src="{{@ v.productImg}}" >
+        </div>
+        <p class='txt-cut'>{{v.productName}}</p>
+        <span>{{v.productPrice}}</span>
+        <i>去凑单</i>
+    </li>
+   {{/each}}
+  </script>
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/template/template-web.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/gsproduct.js"></script>
+<script src="./js/iscroll.js"></script>
+
+
+</body>
+
+</html>

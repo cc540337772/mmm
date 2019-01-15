@@ -1,0 +1,248 @@
+@import "./normalize.less";
+@import "./base.less";
+@design:750;
+@base:75rem;
+ .mmm_header{
+    width: 100%;
+    height: 96/@base;
+    background-color: #ff841d;
+    position: relative;
+    .mmm_logo img{
+        width: 378/@base;
+        height: 54/@base;
+        position: absolute;
+        top:20/@base;
+        left:10/@base;
+    }
+    .mmm_app {
+        width: 75/@base;
+        height: 75/@base;
+        position: absolute;
+        top:10/@base;
+        right:10/@base;
+    }
+}
+.hide{
+    display:none;
+}
+.show{
+    display: block;
+}
+.mmm_footer{
+    padding-top: 50/@base;
+    width: 100%;
+    height: 194/@base;
+    background-color: #efefef;
+    .ft_top{
+        width: 100%;
+        height: 65/@base;
+        border-top: 1px solid #c5c5c5;
+        border-bottom: 1px solid #c5c5c5;
+        display: flex;
+        line-height: 65/@base;
+        text-align: center;
+        a{
+            font-weight: 700;
+
+        }
+        .login{
+            flex:1;
+            
+            // background-color: pink;
+        }
+        .sign{
+            flex:1;
+            border-left: 1px solid #c5c5c5;
+            border-right: 1px solid #c5c5c5;
+        }
+        .mmm_top{
+            flex:1.3;
+            position: relative;
+            img{
+                width: 30/@base;
+                height: 30/@base;
+                display: inline-block;
+                position: absolute;
+                top: 16/@base;
+                left: 80/@base;
+            }
+            // background-color: lime;
+        }
+    }
+    .ft_com{
+        position: relative;
+        .down{
+                position: absolute;
+                top: 20/@base;
+                left: 50%;
+                transform: translateX(-50%);
+            a{
+                // display: block;
+                span{
+                    font-size: 16/@base;
+                    &:first-child{
+                        color: red;
+                    }
+                    &:last-child{
+                        color:#c5c5c5;
+                    }
+                }
+            }
+        }
+        a{
+            display: block;
+            text-align: center;
+        }
+    }
+}
+
+.mmm_container {
+    width: 100%;
+    // height: 3000px;
+    // background-color: pink;
+    max-width: 750px;
+    min-width: 320px;
+    margin: 0 auto;
+    .mmm_search{
+        height: 100/@base;
+        background-color: #fff;
+        position:relative;
+        input{
+            width: 570/@base;
+            height: 60/@base;
+            background-color: #f1f1f1;
+            border-radius: 30/@base;
+            position:absolute;
+            top: 20/@base;
+            left:10/@base;
+            padding-left: 20/@base;
+        }
+        .search{
+            width: 125/@base;
+            height: 60/@base;
+            background-color: #ff841d;
+            position: absolute;
+            top: 20/@base;
+            right: 10/@base;
+            border-radius: 30/@base;
+            text-align: center;
+            line-height: 60/@base;
+            color: #fff;
+            font-weight: 700;
+            font-size: 22/@base;
+            cursor: pointer;
+        }
+    }
+    .mmm_category{
+        width: 100%;
+        // height: 565/@base;
+        background-color: #fff;
+        margin-top: 20/@base;
+        .box{
+            width: 22%;
+            height: 150/@base;
+            margin: 10/@base;
+            background-color: #fff;
+            float: left;
+            text-align: center;
+            img{
+                width: 100/@base;
+                height: 100/@base;
+                margin: 0 auto;
+            }
+            p{
+                font-weight: 700;
+                margin-top:5/@base;
+                font-size: 18/@base;
+            }
+        }
+    }
+    .mmm_discount{
+        width: 100%;
+        // height: 500px;
+        // background-color: lime;
+        .mmm_product{
+            position: relative;
+            height: 255/@base;
+            width: 100%;
+            background-color: #fff;
+            border-bottom: 1px solid #c5c5c5;
+            .pic{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 30%;
+                // background-color: pink;
+                height: 100%;
+                margin-top: 10/@base;
+            }
+            .detail{
+                width: 70%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                right: 0;
+                // background-color: blueviolet;
+                padding: 30/@base ;
+                .info{
+                    p{
+                        font-weight: 700;
+                        font-size: 18/@base;
+                        display: inline-block;
+                    }
+                    span{
+                        color: #ff8221;
+                        font-size: 18/@base;
+                    }
+                }
+                .time{
+                    margin-top: 110/@base;
+                   color: #c5c5c5;
+                   font-size: 14/@base;
+                }
+            }
+
+        }
+    }
+    .mmm_more{
+        width: 100%;
+        height: 60/@base;
+        background-color: #fafafa;
+        padding: 0 20/@base;
+        border: 1px solid #dcdcdc;
+        border-radius: 5/@base;
+        margin-top: 20/@base;
+        a{
+            display: block;
+            text-align: center;
+            line-height: 60/@base;
+            font-size: 20/@base;
+        }
+    }
+    .mmm_ranking{
+        width: 100%;
+        height: 68/@base;
+        background-color: #ff9d1e;
+        margin-top: 20/@base;
+        position: relative;
+        .paihang{
+            padding-left: 20/@base;
+            a{
+                color: #fff;
+                font-size: 20/@base;
+                line-height: 68/@base;
+                
+            }
+        }
+        .cc{
+            position: absolute;
+            top: 15/@base;
+            right: 10/@base;
+            img{
+                width: 40/@base;
+                height: 40/@base;
+            }
+        }
+    }
+   
+}

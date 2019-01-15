@@ -1,0 +1,147 @@
+// 导入 normalize.less 进行浏览器样式统一
+@import "normalize";
+
+// 在 normalize 基础上, 进行样式重置, 添加一些自定义的类
+@import "base";
+
+@design : 750;
+.left_arrow{
+  float:left;
+  margin-left:20/@base;
+  font-size:30/@base;
+}
+@base : 75rem;
+.displayblock{
+ display: block;
+}
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+  }
+ul{
+    list-style:none;
+  }
+html,body{
+    width: 100%;
+    height: 100%;
+  
+  }
+  .fl{
+    float:left;
+  }
+  .fr{
+    float:right;
+  }
+  .mr_5{
+    margin-right:5px;
+  }
+  .ml_5{
+    margin-left:5px;
+  }
+.mmm_container{
+    width: 100%;
+    // height:3000/@base;
+    background-color: #fff;
+    max-width:750px;
+    min-width:320px;
+    margin:0 auto;
+    position: relative;
+    .mmm_header{
+      height:100/@base;
+      background-color: #ff841d;
+      line-height:100/@base;
+      text-align: center;
+      .hd_left{
+           a{
+               font-size:30/@base;
+               color:#fff;
+           }
+      }
+      .hd_right{
+          img{
+            width: 80/@base;
+            height: 80/@base;
+            position: absolute;
+            top:10/@base;
+            right:20/@base;
+
+          }
+      }
+    }
+}
+.mmm_main{
+  // height:2500/@base;
+  width: 100%;
+  background-color: #fff;
+}
+.mmm_bottom{
+  height: 20/@base;
+  width: 100%;
+  background-color: #efefef;
+  text-align: center;
+  .bt_top{
+    height:67/@base;
+    li{
+      float:left;
+      width: 33.3%;
+      border:1px solid #ccc;
+      box-sizing: border-box;
+      text-align: center;
+      line-height:67/@base;
+      background-color: #efefef;
+      a{
+        font-size:18px;
+        display: block;
+        position: relative;
+      }
+
+    }
+    .top_jt{
+      width: 30/@base;
+      height:30/@base;
+      float:left;
+      margin-top:17/@base;
+      margin-left:56/@base;
+      margin-right:-40/@base;
+    }
+  }
+  .bt_bottom{
+    line-height:40/@base;
+    p{
+        background-color: #efefef;
+    }
+  }
+}
+.mmm_main{
+    // height:2000px;
+    // background-color: skyblue;
+    ul{
+        li{
+            width: 50%;
+            border:1px solid #ccc;
+            height:530/@base;
+            float:left;
+            padding:40/@base;
+            .imgbox{
+                width: 300/@base;
+                height:285/@base;
+                // background-color: red;
+                margin:0 auto;
+            }
+            .title{
+                font-size:20/@base;
+                font-weight:500;
+                margin-top:15/@base;
+                margin-bottom:15/@base;
+             }
+             h2{
+                color:#ff8624;
+                margin-bottom:20/@base;
+             }
+             h4{
+                 color:#bbb8b3;
+             }
+        }
+    }
+}

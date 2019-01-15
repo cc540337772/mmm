@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/category.css">
+  <link rel="stylesheet" href="./fonts/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./css/animate.css">
+</head>
+<body>
+  <div class="mmm_container">
+     <div class="mmm_header">
+         <div class="hd_left">
+           <a href="#">
+            <img src="./images/header_logo.png" alt="">
+          </a>
+         </div>
+         <div class="hd_right">
+            <a href="#">
+               <img src="./images/header_app.png" alt="">
+            </a>
+         </div>
+     </div>
+     <div class="mmm_main">
+            <div class="mmm_search clearfix">
+                    <input type="text" placeholder="请输入你想比较的商品">
+                    <div class='search'><a href="#">搜索</a></div>
+            </div>
+            <div class='mmm_nav'></div>
+                    <div class="mmm_category">
+                            <ul class="category_title">
+                               <!-- 挖个坑 -->
+                            </ul>
+                 </div>
+            </div>
+            <div class="mmm_bottom">
+                    <div class="bt_top">
+                        <ul class='clearfix'>
+                            <li>
+                                <a href='#'>登陆</a>
+                            </li>
+                            <li>
+                                <a href='#'>注册</a>
+                            </li>
+                            <li>
+                                <a href='#'>
+                                    <span>返回顶部</span>
+                                    <img src="./images/top.jpg" class='top_jt' alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bt_bottom">
+                        <p><a href="#" style='color:#ff1b32'>手机APP下载 </a><a href="#"> 慢慢买手机版</a><span style='color:#939292'>--掌上比价平台</span></p>
+                        <p>m.manmanbuy.com</p>
+                    </div>
+                </div>
+     </div>
+  
+  
+
+  <script>
+    (window.onresize = window.__setFontSize__ = function () {
+      document.documentElement.style.fontSize = Math.min(750, Math.max(document.documentElement.clientWidth,
+        320)) / 750 * 75 + 'px'
+    })()
+  </script>
+  <script src="./lib/jquery/jquery.min.js"></script>
+  <script src="./lib/template/template-web.js"></script>
+<script src="./js/common.js"></script>
+
+  <script src="./js/category.js"></script>
+  <!-- 渲染列表 -->
+  <script type="text/html" id="titlt_tmp">
+  {{ each result v i }}
+  <li>
+      <a href="javascript:;" data-id="{{ v.titleId }}">{{ v.title }}
+          <i class="fa fa-chevron-down"></i>
+      </a>
+      <ul class="mmm_content clearfix displaynone">
+         <!-- 挖个坑 -->
+      </ul>
+  </li>
+  {{ /each }}
+</script>
+
+<script type="text/html" id="cate_tmp">
+  {{ each result v i }}
+  <li>
+      <a href="productlist.html?categoryid={{ v.categoryId }}"data-id={{@ v.categoryId}}>{{ v.category }}</a>
+  </li>
+  {{ /each }}
+</script>
+
+</body>
+   
+</html>

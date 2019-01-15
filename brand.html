@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/brand.css">
+    <link rel="stylesheet" href="./fonts/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/animate.css">
+</head>
+
+<body>
+    <div class="mmm_container">
+        <div class="mmm_header">
+            <div class="hd_left">
+                <a href="#">
+                    <img src="./images/header_logo.png" alt="">
+                </a>
+            </div>
+            <div class="hd_right">
+                <a href="#">
+                    <img src="./images/header_app.png" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="mmm_main">
+            <div class="mmm_search clearfix">
+                <input type="text" placeholder="请输入你想比较的商品">
+                <div class='search'><a href="#">搜索</a></div>
+            </div>
+            <div class="mmm_line">
+                <a href="index.html">首页></a>
+                <span>全部分类></span>
+            </div>
+            <div class="three">
+                <!-- 挖个坑 -->
+            </div>
+            <div class="four">
+                <ul>
+                    <!-- 挖个坑 -->
+                </ul>
+            </div>
+            <div class="five">
+                <!-- 平板电视产品销量排行 -->
+            </div>
+            <div class="six">
+                <ul>
+                    <!-- 挖个坑 -->
+                </ul>
+            </div>
+
+            <div class="seven">
+                平板电视最新评论
+                <!-- 未渲染 -->
+            </div>
+            <div class="eight">
+                <ul>
+
+                  <!-- 挖个坑 -->
+                    
+                    
+
+                    
+                    
+                    
+                </ul>
+
+
+            </div>
+        </div>
+        <div class="mmm_bottom">
+            <div class="bt_top">
+                <ul class='clearfix'>
+                    <li>
+                        <a href='#'>登陆</a>
+                    </li>
+                    <li>
+                        <a href='#'>注册</a>
+                    </li>
+                    <li>
+                        <a href='#'>
+                            <span>返回顶部</span>
+                            <img src="./images/top.jpg" class='top_jt' alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="bt_bottom">
+                <p><a href="#" style='color:#ff1b32'>手机APP下载 </a><a href="#"> 慢慢买手机版</a><span style='color:#939292'>--掌上比价平台</span></p>
+                <p>m.manmanbuy.com</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        (window.onresize = window.__setFontSize__ = function () {
+      document.documentElement.style.fontSize = Math.min(750, Math.max(document.documentElement.clientWidth,
+        320)) / 750 * 75 + 'px'
+    })()
+  </script>
+    <script type='text/html' id='threeTpl'>
+        {{list}}哪个牌子好
+  
+  </script>
+    <script type='text/html' id=fourTpl>
+        {{each result v i}}
+    <li>
+         <a href="productlist.html?categoryid={{v.categoryId}}">
+            <span class='{{i==0?"first":""}} {{i==1?"second":""}} {{i==2?"third":""}}'>{{i+1}}</span>
+            <h4>{{v.brandName}}</h4>
+            <h5>{{v.brandInfo}}</h5>
+            <i class='fa fa-angle-right'></i>
+        </a>
+    </li>
+   {{/each}}
+
+</script>
+    <script type='text/html' id=fiveTpl>
+        {{list}}产品销量排行
+
+</script>
+    <script type='text/html' id=sixTpl>
+        {{each result v i}}
+    <li>
+         <a href="productlist.html?categoryid={{v.categoryId}}">
+            <div class="imgBox">{{@v.productImg}}</div>
+            <h3>{{v.productName}}</h3>
+            <h2>{{v.productPrice}}/</h2>
+            <h6>{{v.productQuote}}</h6>
+            <span>{{v.productCom}}</span>
+        </a>
+        </li>
+    {{/each}}
+</script>
+
+<script type='text/html' id=eightTpl>
+    {{each result v i}}
+    <li>
+            <div class="imgBox">
+                <img src="./images/categorylist.jpg" alt="">
+            </div>
+            <p>乐视TV(Letv)超3 X55 55英寸智能LED液晶 超级电视 4K超清电视</p>
+             <div class="box">
+                 <h6>{{v.comName}}</h6>
+                 <span>{{v.comTime}}</span>
+                 <p>{{v.comContent}}</p>
+             </div> 
+       
+       
+        </li>
+        {{/each}}
+</script>
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/template/template-web.js"></script>
+    <script src="./js/common.js"></script>
+
+    <script src="./js/brand.js"></script>
+
+
+</body>
+
+</html>
